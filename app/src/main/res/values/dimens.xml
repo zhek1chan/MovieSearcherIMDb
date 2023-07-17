@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="poster_width">200dp</dimen>
+    <dimen name="poster_height">300dp</dimen>
+    <dimen name="search_card_padding">8dp</dimen>
+    <dimen name="search_card_margin_vertical">8dp</dimen>
+    <dimen name="search_card_tv_padding">4dp</dimen>
+    <dimen name="film_name_text">20sp</dimen>
+    <dimen name="film_description_text">16sp</dimen>
+    <dimen name="search_card_texts_margin_start">8dp</dimen>
+</resources>

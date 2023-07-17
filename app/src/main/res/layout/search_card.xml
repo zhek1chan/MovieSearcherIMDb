@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/search_card_margin_vertical"
+    android:background="@color/gray"
+    android:orientation="horizontal"
+    android:padding="@dimen/search_card_padding">
+
+    <ImageView
+        android:id="@+id/film_poster"
+        android:layout_width="@dimen/poster_width"
+        android:layout_height="@dimen/poster_height"
+        android:contentDescription="@string/poster"
+        android:scaleType="centerCrop"
+        tool:src="@drawable/image_placeholder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/search_card_texts_margin_start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/film_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/search_card_tv_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/film_name_text"
+            android:textStyle="bold"
+            tool:text="Название фильма" />
+
+        <TextView
+            android:id="@+id/film_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/search_card_tv_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/film_description_text"
+            tool:text="Описание фильма" />
+
+    </LinearLayout>
+
+</LinearLayout>
