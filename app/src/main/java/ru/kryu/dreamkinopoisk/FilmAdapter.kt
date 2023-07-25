@@ -15,6 +15,7 @@ class FilmAdapter(private val films: ArrayList<Film>,
 
     override fun onBindViewHolder(holder: FilmViewHolder, position: Int) {
         holder.bind(films[position])
+        holder.itemView.setOnClickListener { onFilmClickListener.onFilmClick(films[position]) }
     }
 
     fun interface OnFilmClickListener{
