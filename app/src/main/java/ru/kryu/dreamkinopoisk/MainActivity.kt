@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
     private val retrofitApiService = retrofit.create(ImdbApiService::class.java)
 
     private val films = ArrayList<Film>()
-    private val adapter = FilmAdapter(films)//{
-//        val intent = Intent(this, PosterActivity::class.java)
-//        intent.putExtra("poster", it.image)
-//        startActivity(intent)
-//    }
+    private val adapter = FilmAdapter(films){
+        val intent = Intent(this, PosterActivity::class.java)
+        intent.putExtra("poster", it.image)
+        startActivity(intent)
+    }
 
     private val searchInput: EditText by lazy { findViewById(R.id.search_input) }
     private val searchButton: Button by lazy { findViewById(R.id.search_button) }
@@ -92,6 +92,8 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
+
+
 
 
 }
