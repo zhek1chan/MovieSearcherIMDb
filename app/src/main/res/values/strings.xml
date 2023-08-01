@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dream Kinopoisk</string>
+    <string name="app_name">NedoKinopoisk</string>
     <string name="film_name">Название фильма</string>
     <string name="search">Найти</string>
     <string name="poster">Постер</string>
