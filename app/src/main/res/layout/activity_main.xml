@@ -1,60 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <LinearLayout
+    <EditText android:id="@+id/queryInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp">
+        android:layout_margin="8dp"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/black"
+        android:imeOptions="actionDone"
+        android:text="Поиск"
+        android:singleLine="true"/>
 
-        <EditText
-            android:id="@+id/search_input"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:hint="@string/film_name"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="4dp"
-            android:lines="1"/>
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/search_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/search"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="4dp"/>
+        <ProgressBar android:id="@+id/progressBar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/black"
+            android:visibility="gone"/>
 
-    </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/search_recycler"
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/locations"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/search_card"
-            tools:itemCount="5"/>
+            android:layout_height="match_parent"/>
 
-        <TextView
-            android:layout_marginTop="36dp"
-            android:id="@+id/text_fail"
-            android:layout_width="wrap_content"
+        <TextView android:id="@+id/placeholderMessage"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="@dimen/film_name_text"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:textStyle="bold"
             android:textColor="@color/black"/>
     </FrameLayout>
-
-
 </LinearLayout>

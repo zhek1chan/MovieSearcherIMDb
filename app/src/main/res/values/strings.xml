@@ -3,4 +3,7 @@
     <string name="film_name">Название фильма</string>
     <string name="search">Найти</string>
     <string name="poster">Постер</string>
+    <string name="api_key">k_zcuw1ytf</string>
+    <string name="nothing_found">Ничего не нашлось</string>
+    <string name="something_went_wrong">Что-то пошло не так</string>
 </resources>
